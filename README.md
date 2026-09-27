@@ -1,197 +1,324 @@
-<div align="center">
-
 # 🚗 CampusLift
-### Ride-Sharing, Simplified — For Students, By Students
 
-A university-focused ride-sharing platform that connects verified students traveling along similar routes, making campus commuting safer, more affordable, and more connected.
+### Student Ride Sharing System
 
-![Language](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java&logoColor=white)
-![Paradigm](https://img.shields.io/badge/Paradigm-Object--Oriented-blue?style=flat-square)
-![Storage](https://img.shields.io/badge/Storage-File--Based-lightgrey?style=flat-square)
-![Status](https://img.shields.io/badge/Status-Academic%20Project-yellow?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+> A Java Swing-based desktop platform designed to connect university students through convenient and organized ride sharing.
 
-</div>
+![Java](https://img.shields.io/badge/Language-Java-orange?style=flat-square&logo=java)
+![Swing](https://img.shields.io/badge/GUI-Java%20Swing-blue?style=flat-square)
+![Platform](https://img.shields.io/badge/Platform-Desktop%20Application-lightgrey?style=flat-square)
+![Repo](https://img.shields.io/badge/Hosted%20on-GitHub-black?style=flat-square&logo=github)
 
 ---
 
-## 📋 Table of Contents
+## 📚 Table of Contents
 
-- [🚗 Project Title & Tagline](#-campuslift)
-- [📖 Project Overview](#-project-overview)
-- [🎯 Objectives](#-objectives)
-- [❗ Problem Statement](#-problem-statement)
-- [✨ Key Features](#-key-features)
-- [🔄 System Workflow](#-system-workflow)
-- [🧩 OOP Concepts Used](#-oop-concepts-used)
-- [🏗️ Main Classes / Modules](#-main-classes--modules)
-- [💻 Technologies Used](#-technologies-used)
-- [📁 Project Structure](#-project-structure)
-- [⚙️ Installation & How to Run](#-installation--how-to-run)
-- [🚀 Future Improvements](#-future-improvements)
-- [👥 Contributors](#-contributors)
-- [📄 License](#-license)
+- [Overview](#-project-overview)
+- [Problem Statement](#-problem-statement)
+- [Project Objectives](#-project-objectives)
+- [Key Features](#-key-features)
+- [System Workflow](#-system-workflow)
+- [User Roles](#-user-roles)
+- [Functional Modules](#-functional-modules)
+- [GUI / User Interface](#️-gui--user-interface)
+- [Technology Stack](#️-technology-stack)
+- [Project Architecture](#️-project-architecture)
+- [Project Structure](#-project-structure)
+- [Installation & Setup](#️-installation--setup)
+- [How to Run](#️-how-to-run)
+- [Future Scope](#-future-scope)
+- [Academic Context](#-academic-context)
+- [Project Status](#-project-status)
+- [Contriburors](#-contributor)
 
 ---
 
-## 📖 Project Overview
+## 📌 Project Overview
 
-**CampusLift** is a console-based, university-focused ride-sharing platform built as an Object-Oriented Programming (OOP) course project. It allows verified students to **offer**, **search**, **request**, and **share** rides with other students traveling along similar routes.
+**CampusLift** is a desktop application built with **Java** and **Java Swing**, developed to help university students organize and share rides with one another. Instead of relying on informal group chats or word-of-mouth arrangements, CampusLift gives students a dedicated, structured platform for posting rides, discovering available options, and connecting with other students traveling in similar directions.
 
-A student can create a ride by specifying a pickup location, destination, date, time, number of available seats, and an estimated fare or contribution amount. Other students can search for rides that match their travel needs and send a request to the ride owner, who can then accept or reject it. Once accepted, the ride is confirmed as a booking, and after the trip, participants can rate and review each other.
+The system is built around a straightforward interaction model: a student registers and logs in, manages their profile, and then either **posts a ride** they are offering or **browses rides** posted by others. From there, students can send join requests, and the system keeps track of ride and participant information so that everyone involved has a clear picture of who is going where.
 
-The project demonstrates practical application of core OOP principles — encapsulation, inheritance, polymorphism, abstraction, association, exception handling, and file handling — through a realistic, multi-user system.
+The entire user experience is delivered through a **Java Swing graphical interface**, meaning students interact with the system through windows, forms, and buttons rather than a command-line interface — making the application approachable for everyday use.
 
-## 🎯 Objectives
+CampusLift is implemented as a working desktop application, not a conceptual design — every feature described in this document reflects functionality that exists in the current codebase.
 
-- Design and implement a student ride-sharing system using core OOP principles.
-- Provide a structured workflow for offering, searching, requesting, and booking rides.
-- Demonstrate encapsulated, reusable, and maintainable class design.
-- Implement persistent, file-based data storage without relying on a database.
-- Apply robust exception handling to manage invalid or conflicting operations.
-- Build a foundation that can be extended with a GUI, database, or web interface in the future.
+---
 
-## ❗ Problem Statement
+## 🎯 Problem Statement
 
-Many students commute to and from campus along overlapping routes but have no simple way of knowing who else is traveling the same way. This leads to:
+University students frequently travel between campus, hostels, and nearby areas, but there is rarely a dedicated system to help them coordinate these trips efficiently. Common challenges include:
 
-- Higher individual transport costs that could otherwise be shared.
-- Underused seats in private vehicles, rickshaws, or ride-hailing trips.
-- Limited trust when arranging informal rides through scattered social media posts or word of mouth.
-- No structured way to track ride requests, confirmations, or feedback.
+- **Difficulty finding suitable rides** — students often don't know who else is traveling in the same direction at a similar time.
+- **Lack of organized ride-sharing** — arrangements are usually informal, scattered across chat groups, or based on chance encounters.
+- **Disconnected students with overlapping routes** — two students heading to the same destination may never realize a ride could be shared.
+- **No centralized platform for ride-related information** — there is no single place to track who is offering a ride, who has requested to join, and the relevant details of each trip.
 
-CampusLift addresses this by giving verified students a dedicated, structured platform to coordinate rides with peers, rather than relying on ad-hoc arrangements.
+CampusLift addresses these issues by giving students one dedicated application to post, discover, and manage rides.
+
+---
+
+## 🎯 Project Objectives
+
+- Provide university students with a dedicated ride-sharing platform.
+- Allow students to post rides and discover rides posted by others.
+- Simplify the process of requesting and joining a ride.
+- Maintain organized records of riders and passengers for each trip.
+- Deliver a user-friendly desktop experience through a Java Swing GUI.
+- Demonstrate practical application of Java and event-driven GUI programming.
+- Keep ride-related information organized and easy to manage within the system.
+
+---
 
 ## ✨ Key Features
 
-| Feature | Description |
-|---|---|
-| 🧑‍🎓 Student Registration & Verification | Students register with their academic details and are verified before accessing the platform. |
-| 👤 Student Profiles | Each student has a profile containing contact info, ride history, and rating. |
-| 🚘 Offer/Create a Ride | Students can create a ride with pickup point, destination, date, time, available seats, and fare. |
-| 🔍 Search Available Rides | Students can search for rides matching their route, date, or time. |
-| 🤝 Ride Request & Approval | Students can request to join a ride; ride owners can accept or reject requests. |
-| 📅 Booking Management | Confirmed requests become bookings, tracked separately from pending requests. |
-| 💺 Seat Availability | Seat counts update automatically as bookings are confirmed. |
-| 💰 Estimated Fare/Contribution | Each ride carries an estimated per-seat contribution amount. |
-| ⭐ Rating & Review System | Students can rate and review each other after a completed ride. |
-| 🛠️ Admin Management | Admins can verify students, manage rides, and moderate the platform. |
-| 💾 File-Based Data Storage | All data is persisted to local files, requiring no external database. |
+### 🔐 Student Registration & Login
+Students can create an account and log in to securely access their CampusLift dashboard.
+
+### 👤 User Profile Management
+Students can view and manage their basic profile information within the application.
+
+### 🖥️ Java Swing GUI
+The entire application is delivered through a graphical interface built with Java Swing, covering everything from login to ride management.
+
+### 🚗 Ride Creation / Posting
+Students can create and publish a ride, entering the relevant details for other students to view.
+
+### 🔎 Ride Browsing
+Students can browse the list of currently available rides to find one that suits their travel needs.
+
+### 📩 Ride Request / Joining
+Students can send a request to join a ride that matches their requirements.
+
+### 👥 Rider & Passenger Management
+The system keeps track of the riders offering trips and the passengers who have joined them.
+
+### 🔄 Basic Ride Matching
+CampusLift supports basic matching logic to help connect students with rides relevant to their travel details.
+
+### 📋 Ride Information Management
+Ride details can be viewed and managed through the application interface.
+
+### 💾 Data Management
+The system manages the underlying user and ride data required to keep the application functioning correctly.
+
+---
 
 ## 🔄 System Workflow
 
+The diagram below illustrates the complete flow of a typical CampusLift session, from application launch to logout.
+
 ```mermaid
 flowchart TD
-    A[Student Registers] --> B[Admin Verifies Student]
-    B --> C{Choose Action}
-    C -->|Offer a Ride| D[Create Ride: Route, Date, Time, Seats, Fare]
-    C -->|Need a Ride| E[Search Available Rides]
-    E --> F[Send Ride Request]
-    D --> G[Ride Listed as Available]
-    F --> H{Ride Owner Decision}
-    H -->|Accept| I[Booking Confirmed & Seat Reserved]
-    H -->|Reject| J[Request Closed]
-    I --> K[Ride Completed]
-    K --> L[Rating & Review Submitted]
+    A([Start]) --> B[Open CampusLift]
+    B --> C{Registered?}
+    C -- No --> D[Register]
+    D --> E[Login]
+    C -- Yes --> E[Login]
+    E --> F[User Dashboard]
+    F --> G[Manage Profile]
+    G --> H{Choose Action}
+
+    H -- Offer a Ride --> I[Enter Ride Details]
+    I --> J[Publish Ride]
+    J --> M[Ride & Passenger Information Management]
+
+    H -- Find a Ride --> K[Browse Available Rides]
+    K --> L[Select Suitable Ride]
+    L --> N[Send Join Request]
+    N --> M
+
+    M --> O[Logout]
+    O --> P([End])
 ```
 
-## 🧩 OOP Concepts Used
+---
 
-| Concept | How It's Applied |
-|---|---|
-| **Classes & Objects** | Core entities such as `Student`, `Ride`, `RideRequest`, `Booking`, and `Rating` are modeled as classes; each registered student, ride, or booking is an object instance. |
-| **Encapsulation** | Class fields (e.g., a student's contact details, a ride's seat count) are kept private and accessed only through getters/setters, protecting internal state from direct external modification. |
-| **Inheritance** | A common `User` base class defines shared attributes and behavior, with `Student` and `Admin` extending it to add role-specific functionality. |
-| **Polymorphism** | Method overriding is used so that shared operations (e.g., displaying a dashboard or handling permissions) behave differently for a `Student` versus an `Admin`. |
-| **Abstraction** | Abstract classes/interfaces define contracts for behavior (e.g., a `Notifiable` or `Bookable` interface) without exposing implementation details to other classes. |
-| **Association** | Classes are linked through relationships rather than inheritance — a `Ride` is associated with a `Student` (owner) and multiple `RideRequest`/`Booking` objects. |
-| **Exception Handling** | Custom exceptions (e.g., for invalid seat counts, duplicate requests, or unverified students) are used to gracefully handle invalid operations instead of crashing the program. |
-| **File Handling** | Student, ride, and booking data is read from and written to local files, providing persistence between program runs. |
+## 👥 User Roles
 
-## 🏗️ Main Classes / Modules
+CampusLift is built around a single primary interaction model: the **Student / User**.
 
-| Class / Module | Responsibility |
-|---|---|
-| `User` (abstract) | Base class holding common attributes (ID, name, contact info) shared by all users. |
-| `Student` | Represents a verified student; can offer rides, search rides, and send requests. |
-| `Admin` | Manages student verification and oversees platform data. |
-| `Ride` | Represents an offered ride — route, date, time, seats, and fare. |
-| `RideRequest` | Represents a student's request to join a specific ride. |
-| `Booking` | Represents a confirmed ride request with reserved seats. |
-| `Rating` | Stores a rating/review submitted after a completed ride. |
-| `FileManager` | Handles reading from and writing to data files for persistence. |
-| Custom Exceptions | E.g., `InvalidSeatException`, `RideNotFoundException`, `DuplicateRequestException` — used for controlled error handling. |
-| `Main` | Entry point that drives the console-based user interaction flow. |
+### Student / User
+A registered student can:
 
-## 💻 Technologies Used
+- Register and log in to the system
+- Manage their profile information
+- Post a new ride
+- Browse rides posted by other students
+- Request to join an available ride
+- View and manage relevant ride and participant information
 
-| Category | Technology |
-|---|---|
-| Language | Java |
-| Data Storage | Flat files (`.txt` / serialized objects) |
-| Interface | Console-based (CLI) |
-| Version Control | Git & GitHub |
+There is no separate administrative role implemented in the current system.
+
+---
+
+## 🧩 Functional Modules
+
+| Module                     | Description                                              |
+|----------------------------|-----------------------------------------------------------|
+| **Authentication**         | Handles student registration and login                   |
+| **Profile Management**     | Handles student profile information                       |
+| **Ride Management**        | Allows students to create and manage rides                |
+| **Ride Browsing**          | Displays available rides for students to explore           |
+| **Ride Request**           | Allows students to request/join a ride                    |
+| **Matching**               | Provides basic matching between students and rides         |
+| **Participant Management** | Manages rider and passenger information for each ride     |
+| **Data Management**        | Handles the storage and retrieval of application data      |
+| **GUI**                    | Provides the Java Swing interface for all user interactions |
+
+Each module operates within the desktop application and communicates through the underlying application logic to keep ride and user data consistent across screens.
+
+---
+
+## 🖥️ GUI / User Interface
+
+CampusLift's entire user experience is delivered through a **Java Swing** graphical interface. The application is organized into a set of focused screens, each responsible for a specific part of the workflow:
+
+- **Login / Registration Screen** — allows new students to register and existing students to log in.
+- **Dashboard** — the central hub after login, providing access to profile management and ride actions.
+- **Profile Screen** — displays and allows updates to the student's basic information.
+- **Create Ride Screen** — a form-based screen for entering and publishing ride details.
+- **Available Rides Screen** — lists rides currently posted by other students.
+- **Ride Details Screen** — shows detailed information about a selected ride.
+- **Ride Request / Joining Screen** — allows a student to send a request to join a ride.
+
+> **Note:** Java Swing is the current and only GUI technology used in this project. No screenshots are included in this README, as none have been provided for this repository.
+
+---
+
+## 🛠️ Technology Stack
+
+| Technology                    | Purpose                                    |
+|--------------------------------|---------------------------------------------|
+| **Java**                       | Core programming language                  |
+| **Java Swing**                 | Graphical User Interface                   |
+| **Object-Oriented Programming**| Application design and code organization    |
+| **Data Storage**               | Storage implementation depends on the project configuration |
+
+---
+
+## 🏗️ Project Architecture
+
+CampusLift follows a straightforward interaction flow between its interface and underlying logic:
+
+```text
+User
+ ↓
+Java Swing GUI
+ ↓
+Application Logic
+ ↓
+Ride / User Management
+ ↓
+Data Management
+```
+
+```mermaid
+flowchart LR
+    U[User] --> G[Java Swing GUI]
+    G --> L[Application Logic]
+    L --> R[Ride / User Management]
+    R --> D[Data Management]
+```
+
+- **Java Swing GUI** — captures user input and displays application screens.
+- **Application Logic** — processes user actions such as registration, ride posting, and ride requests.
+- **Ride / User Management** — maintains the relationships between students, rides, and participants.
+- **Data Management** — handles the underlying storage and retrieval of application data.
+
+No specific architectural pattern (such as MVC or DAO) is claimed here, as this depends on the actual implementation details of the codebase.
+
+---
 
 ## 📁 Project Structure
 
-```
+> The structure below is an **example layout** for illustration purposes. It does not represent confirmed file or package names from the actual repository.
+
+```text
 CampusLift/
+│
 ├── src/
-│   ├── Main.java
-│   ├── models/
-│   │   ├── User.java
-│   │   ├── Student.java
-│   │   ├── Admin.java
-│   │   ├── Ride.java
-│   │   ├── RideRequest.java
-│   │   ├── Booking.java
-│   │   └── Rating.java
-│   ├── services/
-│   │   ├── AuthService.java
-│   │   ├── RideService.java
-│   │   └── BookingService.java
-│   ├── exceptions/
-│   │   ├── InvalidSeatException.java
-│   │   ├── RideNotFoundException.java
-│   │   └── DuplicateRequestException.java
-│   └── utils/
-│       └── FileManager.java
-├── data/
-│   ├── students.txt
-│   ├── rides.txt
-│   └── bookings.txt
+│   ├── (application source files)
+│
+├── resources/
+│   ├── (supporting resources, if any)
+│
 ├── README.md
-└── LICENSE
+└── (other project files)
 ```
 
-## ⚙️ Installation & How to Run
+---
 
-**Prerequisites:** JDK 8 or later installed on your system.
+## ⚙️ Installation & Setup
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/<your-username>/CampusLift.git
-cd CampusLift
+### Requirements
 
-# 2. Compile the source files
-javac -d bin src/**/*.java
+- Java JDK (a recent LTS version is recommended)
+- A Java-compatible IDE (e.g., IntelliJ IDEA, Eclipse, or VS Code)
+- Git
 
-# 3. Run the application
-java -cp bin Main
-```
+### Setup Steps
 
-> Adjust package/class paths above to match your actual source layout if it differs from the structure shown.
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Open the project in your preferred IDE.
+3. Configure the Java JDK for the project.
+4. Configure any required project dependencies.
+5. Build the project.
+6. Run the application's main class.
 
-## 🚀 Future Improvements
+---
 
-- Graphical User Interface (GUI) using JavaFX or Swing.
-- Migration from file-based storage to a relational database.
-- Real-time notifications for ride requests and status updates.
-- Map-based route matching and distance estimation.
-- Mobile application version.
-- More granular admin analytics and reporting tools.
+## ▶️ How to Run
 
-## 👥 Contributors
+> Run the project's main Java class from your IDE to launch the CampusLift desktop application.
+
+Once launched, the Java Swing interface will open, allowing you to register or log in and begin using the system.
+
+---
+
+## 🔮 Future Scope
+
+The following enhancements are being considered for future versions of CampusLift. These are **not** part of the current implementation.
+
+### 💳 Online Payment Integration
+Future versions may integrate secure online payment functionality for handling ride-related costs digitally.
+
+### 🔔 Push Notifications
+Future versions may introduce real-time notifications for ride requests, confirmations, updates, cancellations, and other ride-related events.
+
+### 📱 Mobile Application
+The desktop system can later be extended into a dedicated Android/iOS mobile application.
+
+### 🤖 AI-Based Route/Ride Optimization
+Future versions may use AI-based techniques to improve route planning, ride matching, and overall ride efficiency.
+
+---
+
+## 🎓 Academic Context
+
+CampusLift is an academic software project developed to demonstrate practical implementation of:
+
+- Java programming fundamentals
+- Object-Oriented Programming (OOP) principles
+- GUI development using Java Swing
+- Event-driven programming
+- Application design and organization
+- Basic ride-sharing system logic
+
+---
+
+## 🚀 Project Status
+
+> **Status:** Active Academic Project
+
+This project is developed and maintained as part of an academic curriculum and is not intended for commercial deployment or production use.
+
+---
+
+## 👨‍💻 Contributor
 
 | Name | Role |
 |---|---|
@@ -200,9 +327,3 @@ java -cp bin Main
 | Riduana Sababa Suchi | Developer |
 | Tasfia Amin Rifa | Developer |
 | Jannatul Niyam Tisha | Developer |
-
-*Developed as part of an Object-Oriented Programming course project at Daffodil International University (DIU).*
-
-## 📄 License
-
-This project is developed for academic purposes. You may license it under the [MIT License](LICENSE) or another license of your choice before publishing it publicly.
