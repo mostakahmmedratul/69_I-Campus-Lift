@@ -195,13 +195,14 @@ java -cp bin Main
 
 | Name | Role |
 |---|---|
-| Ratul | Developer |
-| *(Add teammate name)* | *(Add role)* |
-| *(Add teammate name)* | *(Add role)* |
+| Md Mostak Ahmmed Ratul | Team Leader |
+| Umaiya Khiyam Nira | Developer |
+| Riduana Sababa Suchi | Developer |
+| Tasfia Amin Rifa | Developer |
+| Jannatul Niyam Tisha | Developer |
 
 *Developed as part of an Object-Oriented Programming course project at Daffodil International University (DIU).*
 
 ## 📄 License
 
 This project is developed for academic purposes. You may license it under the [MIT License](LICENSE) or another license of your choice before publishing it publicly.
-
