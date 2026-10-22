@@ -11,6 +11,7 @@
 
 ---
 
+
 ## 📚 Table of Contents
 
 - [Overview](#-project-overview)
@@ -29,7 +30,7 @@
 - [Future Scope](#-future-scope)
 - [Academic Context](#-academic-context)
 - [Project Status](#-project-status)
-- [Contriburors](#-contributor)
+- [Contributors](#contributors)
 
 ---
 
@@ -188,13 +189,17 @@ CampusLift's entire user experience is delivered through a **Java Swing** graphi
 
 ## 🛠️ Technology Stack
 
-| Technology                    | Purpose                                    |
-|--------------------------------|---------------------------------------------|
-| **Java**                       | Core programming language                  |
-| **Java Swing**                 | Graphical User Interface                   |
-| **Object-Oriented Programming**| Application design and code organization    |
-| **Data Storage**               | Storage implementation depends on the project configuration |
+## 🛠️ Technology Stack
 
+| Technology | Purpose |
+|---|---|
+| **Java** | Core programming language |
+| **Java Swing** | Building the desktop graphical user interface |
+| **Object-Oriented Programming (OOP)** | Organizing application components using classes and objects |
+| **Event-Driven Programming** | Handling user interactions such as button clicks and form submissions |
+| **Git & GitHub** | Version control and source code hosting |
+
+> **Note:** The data storage technology will be documented once the implementation is finalized.
 ---
 
 ## 🏗️ Project Architecture
@@ -232,20 +237,44 @@ No specific architectural pattern (such as MVC or DAO) is claimed here, as this 
 
 ## 📁 Project Structure
 
-> The structure below is an **example layout** for illustration purposes. It does not represent confirmed file or package names from the actual repository.
+CampusLift contains a Java Swing desktop application and a separate browser-based website demo. Both are maintained in the same GitHub repository.
 
 ```text
 CampusLift/
 │
 ├── src/
-│   ├── (application source files)
+│   └── (Java Swing application source files will be added later)
 │
 ├── resources/
-│   ├── (supporting resources, if any)
+│   └── (Desktop application icons and assets will be added later)
+│
+├── docs/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── assets/
+│   │   └── (Website images and icons)
+│   └── screenshots/
+│       └── (Project screenshots)
 │
 ├── README.md
-└── (other project files)
+├── .gitignore
+└── LICENSE
 ```
+
+### Directory Description
+
+- **`src/`** — Contains the Java source code for the desktop application.
+- **`resources/`** — Stores resources used by the Java Swing interface.
+- **`docs/`** — Contains the static website demo published through GitHub Pages.
+- **`docs/index.html`** — Defines the website's structure and content.
+- **`docs/style.css`** — Controls the website's layout, colors, and responsive styling.
+- **`docs/script.js`** — Handles interactive demo features, including navigation and ride-related interactions.
+- **`docs/assets/`** — Stores images, icons, and other website assets.
+- **`docs/screenshots/`** — Stores screenshots of the desktop application and website demo.
+- **`README.md`** — Documents the project, its features, setup instructions, and demo links.
+
+> Note: This structure describes the intended repository organization. The listed files and directories should be created before they are presented as part of the implemented project.
 
 ---
 
@@ -318,12 +347,57 @@ This project is developed and maintained as part of an academic curriculum and i
 
 ---
 
-## 👨‍💻 Contributor
+<a id="contributors"></a>
 
-| Name | Role |
-|---|---|
-| Md Mostak Ahmmed Ratul | Team Leader |
-| Umaiya Khiyam Nira | Developer |
-| Riduana Sababa Suchi | Developer |
-| Tasfia Amin Rifa | Developer |
-| Jannatul Niyam Tisha | Developer |
+
+## 👨‍💻 Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/mostakahmmedratul">
+        <img src="https://github.com/mostakahmmedratul.png" width="100px;" alt="Contributor 1"/>
+        <br />
+        <sub><b>Md Mostak Ahmmed Ratul</b></sub>
+      </a>
+      <br />
+      <sub>Team Leader</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/nirakhiyam38-svg">
+        <img src="https://github.com/nirakhiyam38-svg.png" width="100px;" alt="Contributor 2"/>
+        <br />
+        <sub><b>Umaiya Khiyam Nira</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Riduanansababa">
+        <img src="https://github.com/Riduanansababa.png" width="100px;" alt="Contributor 3"/>
+        <br />
+        <sub><b>Riduana Sababa Suchi</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/rifaaah-tashu">
+        <img src="https://github.com/rifaaah-tashu.png" width="100px;" alt="Contributor 4"/>
+        <br />
+        <sub><b>Tasfia Amin Rifa</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jannatulniymtisha-blip">
+        <img src="https://github.com/jannatulniymtisha-blip.png" width="100px;" alt="Contributor 5"/>
+        <br />
+        <sub><b>Jannatul Niyam Tisha</b></sub>
+      </a>
+      <br />
+      <sub>Developer</sub>
+    </td>
+  </tr>
+</table>
